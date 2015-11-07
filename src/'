@@ -1,0 +1,130 @@
+#include<Session.h>
+Session::Session(int maxtime,Session::sessionType sessionType,const talkPtr_list_type& talkList,const talk_hash_type
+& talkHash):sessionMaxTime(maxtime),sessiontype(sessionType),talk_list(talkList),talk_hash(talkHash){
+}
+void Session::printSessionTalk()
+{
+	std::cout << "printSessionTalk " << std::endl;
+	try{
+		for(talkPtr_list_type::const_iterator iter=sessionTalkList.begin();iter!=sessionTalkList.end();iter++)
+		{
+			std::cout<< (*iter).get()->getDescription() << std::endl;
+		}	
+	}catch(...)
+	{
+	}
+}
+/**************************************************************************
+****   Subset sum : Print all subsets with required sum                 ****
+****   http://www.edufyme.com/code/?id=45c48cce2e2d7fbdea1afc51c7c6ad26 ****
+***************************************************************************/
+static void Session:printVector(std::vector<int> &v)
+{
+     std::vector<int> setData;
+     for(int i = 0; i<v.size(); i++)
+     {
+         std::cout<<v[i]<<" ";
+         setData.push_back(v[i]);
+     }
+     std::cout<<std::endl;
+     subset_list.push_back(setData);
+}
+static void Util::ss(std::vector<int> &list, int n, std::vector<int> current, int sum)
+{
+    if( sum == 0 ) { printVector(current); return; }
+
+    if( n == 0 ) return;
+
+    if( list[n-1] <= sum )
+    {
+         ss(list, n-1, current, sum);
+         current.push_back(list[n-1]);
+         ss(list, n-1, current, sum-list[n-1]);
+    }
+    else
+    {
+        ss(list, n-1, current, sum);
+    }
+}
+int Session::fillUnScheduledTalkDuration(int maxIteration,Util::subset_type& finalSubsetList ) 
+{
+	try{
+		Util::vec_int_type set_of_num,curr;
+		int totalTime = 0;	
+		int iter = 0;
+		for( int cnt = 0; cnt < talk_list.size(); cnt++ ){
+			if( !talk_list[cnt].get()->isScheduled() )
+			{
+			    totalTime += talk_list[cnt].get()->getTalkTime();	
+				set_of_num.push_back(talk_list[cnt].get()->getTalkTime());	
+				iter++;
+				if ( iter == maxIteration && totalTime > 180 ){
+					break;
+				}	
+					
+			}
+		}
+		Util::ss(set_of_num,iter,curr,180);
+		if( Util::subset_list.size() != 0)
+		{
+			finalSubsetList = Util::subset_list;
+		}
+	}catch(...){
+	}	
+}
+
+Util::subset_type& Session::getMorningSession()
+{
+	try{
+		Util::vec_int_type setOfDuration,curr;
+		Util::subset_type final_subset_list;
+		do{
+			fillUnScheduledTalkDuration(4,final_subset_list); 
+		}while(final_subset_list.size() !=0);
+
+	}catch(...){
+	}
+}
+
+void Session::addTalk()
+{
+	std::cout << " addTalk() " << std::endl;
+	try{
+			//add talk more aggressively , no gaps ,may use the hash for best match
+			sessionTotalTime = 0;
+			int timeRemaining = 0;
+			int totalTalk = talk_list.size();
+			int totalScheduled = 0;
+			while(sessionTotalTime < sessionMaxTime )
+			{
+				if(  totalScheduled == totalTalk ){
+					break;
+				}
+				for( int cnt = 0 ; cnt < totalTalk ; cnt++)
+				{
+					timeRemaining = sessionMaxTime - sessionTotalTime ;
+					if( !talk_list[cnt].get()->isScheduled())
+					{
+						if ( talk_list[cnt].get()->getTalkTime()<=timeRemaining ){
+						sessionTalkList.push_back(talk_list[cnt]);
+						sessionTotalTime += talk_list[cnt].get()->getTalkTime();
+						talk_list[cnt].get()->markScheduled();
+						std::cout<< " Selected talk " << sessionTotalTime <<"/" <<sessionMaxTime << " " << talk_list[cnt].get()->getDescription() << std::endl;
+						totalScheduled++;
+						}
+					}else{
+						totalScheduled++;
+					}
+					
+				}				
+			}
+			if (sessiontype == Session::MORNING ){
+				
+			}else if ( sessiontype == Session::EVENING )
+			{
+			}
+		
+	}catch(...)
+	{
+	}
+}

@@ -1,0 +1,53 @@
+Start testing: Nov 03 11:08 UTC
+----------------------------------------------------------
+1/1 Testing: FileLoad
+1/1 Test: FileLoad
+Command: "/home/vagrant/conference/bin/FileLoad" "/home/vagrant/conference/bin/conference" "/home/vagrant/conference/test/testdata.txt"
+Directory: /home/vagrant/conference/build/test
+"FileLoad" start time: Nov 03 11:08 UTC
+Output:
+----------------------------------------------------------
+Running 1 test case...
+/home/vagrant/conference/bin/conference/home/vagrant/conference/test/testdata.txt
+no of iteration : 5
+Size of first list 1
+no of iteration : 5
+no of iteration : 6
+Size of first list 2
+no of iteration : 6
+Track : 1
+09:00AM Overdoing it in Python 45min
+09:45AM Lua for the Masses 30min
+10:15AM Ruby Errors from Mismatched Gem Versions 45min
+11:00AM Writing Fast Tests Against Enterprise Rails 60min
+12:00PM Lunch
+01:00PM Common Ruby Errors 45min
+01:45PM Rails for Python Developers lightning
+01:50PM Communicating Over Distance 60min
+02:50PM Accounting-Driven Develpoment 45min
+03:35PM Woah 30min
+04:05PM Sit Down and Write 30min
+05:00PM Networking Event
+Track : 2
+09:00AM Programming in the Boondocks of Seattle 30min
+09:30AM Pair Programming vs Noise 45min
+10:15AM Rails Magic 60min
+11:15AM Clojure Ate Scala (on my project) 45min
+12:00PM Lunch
+01:00PM Ruby on Rails: Why We Should Move On 60min
+02:00PM Ruby vs. Clojure for Back-End Development 30min
+02:30PM Ruby on Rails Legagcy App Maintenance 60min
+03:30PM A World Without HackerNews 30min
+04:00PM User Interface CSS in Rails Apps 30min
+05:00PM Networking Event
+
+*** No errors detected
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"FileLoad" end time: Nov 03 11:08 UTC
+"FileLoad" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 03 11:08 UTC

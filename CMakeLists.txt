@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8)
+include(Boost.cmake)
+set( EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin )
+include_directories(${CMAKE_SOURCE_DIR}/include})
+add_subdirectory(src)
+enable_testing()
+include(CTest)
+add_subdirectory(test)
