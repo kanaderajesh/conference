@@ -6,6 +6,10 @@
 # by the Free Software Foundation. 
 # See the COPYING file for more information.
 #
+
+os:
+    - linux
+
 sudo: false
 
 language: cpp
@@ -28,7 +32,11 @@ addons:
     - cmake
     - make
 
-#script: ./tools/ci/script.sh
+script:
+    - cd build
+    - rm -Rf *
+    - cmake ..
+    - make 
 
 notifications:
     email:
