@@ -16,7 +16,6 @@ language: cpp
 
 compiler:
     - g++
-    - clang
 
 env:
 
@@ -31,6 +30,7 @@ addons:
     - g++-multilib
     - cmake
     - make
+    - make test
 
 script:
     - cd build
