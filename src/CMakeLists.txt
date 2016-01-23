@@ -1,3 +1,4 @@
+# commented 
 file(GLOB SRC_LIST
     RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
     *.cpp
