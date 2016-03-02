@@ -12,28 +12,38 @@
   </ul>
 </div>
 <div>
-Boost Build instruction:
-1.	Download the boost 1.48 library from http://sourceforge.net/projects/boost/files/boost/1.48.0/boost_1_48_0.tar.gz
-2.	Unzip and Untar boost_1_48_0.tar.gz
-3.	From command go to folder boost_1_48_0
-4.	Run ./booststrap.sh .prefix=/your/home/directory/boost
-5.	./b2 variant=release install link=shared
-6.	Once the build is completed , boost will get installed at ./your/home/directory/boost.
+<p>Boost Build instruction:</p>
+  <ul>
+    <li>Download the boost 1.48 library from http://sourceforge.net/projects/boost/files/boost/1.48.0/boost_1_48_0.tar.gz</li>
+    <li>Unzip and Untar boost_1_48_0.tar.gz</li>
+    <li>From command go to folder boost_1_48_0</li>
+    <li>Run ./booststrap.sh .prefix=/your/home/directory/boost</li>
+    <li>./b2 variant=release install link=shared</li>
+    <li>Once the build is completed , boost will get installed at ./your/home/directory/boost.</li>
+  </ul>
 </div>
 <div>
-Running Ctest:
-1. to run sample data , via CTest , just enter command ctest -VV in build directory
-2. To build only test, use command make test.
+<p>Running Ctest:</p>
+<ul>
+  <li>to run sample data , via CTest , just enter command ctest -VV in build directory</li>
+  <li>To build only test, use command make test.</li>
+</ul>
 </div>
 <div>
-Run instruction:
-1. to feed talk text on console, just run executable ./conference with no parameter.
-2. To feed Talk file to ./conference , just pass file path parameter after the command.
-3. make sure you have sufficient rights to run the executable, use chmod u+x .
+<p>Run instruction:</p>
+<ul>
+<li>to feed talk text on console, just run executable ./conference with no parameter.</li>
+<li>To feed Talk file to ./conference , just pass file path parameter after the command.</li>
+<li>make sure you have sufficient rights to run the executable, use chmod u+x .</li>
+</ul>
 </div>
-Assumptions:
-1.	Talk text always end with .lightning. or with .MMMmin. , where .MMM. stand for minutes.
-2.	Currently only tested on linux machine, dont think any change require for windows.
-3.  Talk text should be less than 80 chars
-4.  System take Talk length greater than 180 and 240, it will try to schedule them but simply reject talks which are greater than 180 and 240.
-5.  Doesn't support unicode Talk text.
+<div>
+<p>Assumptions:</p>
+<ul>
+<li>Talk text always end with .lightning. or with .MMMmin. , where .MMM. stand for minutes.</li>
+<li>Currently only tested on linux machine, dont think any change require for windows.</li>
+<li>Talk text should be less than 80 chars.</li>
+<li>System take Talk length greater than 180 and 240, it will try to schedule them but simply reject talks which are greater than 180 and 240.</li>
+<li>Doesn't support unicode Talk text.</li>
+</ul>
+</div>
