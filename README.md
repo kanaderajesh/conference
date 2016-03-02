@@ -72,7 +72,7 @@ Track 1:
 <p>04:15PM Networking Event</p>
 </div>
 <div>
-<h1>Design Implementation<.h1>
+<h1>Design Implementation</h1>
 <img src="conference_track_management_design.jpg">
 </div>
 <div>
