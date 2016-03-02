@@ -72,6 +72,10 @@ Track 1:
 <p>04:15PM Networking Event</p>
 </div>
 <div>
+Design Implementation
+<img src="conference_track_management_design.jpg">
+</div>
+<div>
 <p>Build instruction :</p>
   <ul>
     <li>Require cmake 2.8+</li>
