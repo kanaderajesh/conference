@@ -61,7 +61,7 @@ Track 1:
 Track 2:
 </p>
 <p>
-09:00AM Ruby on Rails Legacy App Maintenance 60min
+<p>09:00AM Ruby on Rails Legacy App Maintenance 60min</p>
 10:00AM Overdoing it in Python 45min
 10:45AM Ruby Errors from Mismatched Gem Versions 45min
 11:30AM Lua for the Masses 30min
